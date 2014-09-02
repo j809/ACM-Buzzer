@@ -1,0 +1,39 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html onclick="KeyboardHandler();">
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="CSS/main.css" type="text/css" rel="stylesheet"/>
+		<script src="JSLib/jquery-latest.min.js"></script>
+		<script>
+		window.onload = function() {
+		  document.getElementById("fu").focus();
+		};
+		function KeyboardHandler() {
+			window.location='team-first.php?v=3';
+		}
+		</script>
+		<script>
+		function autoRefresh_div()
+		{
+			$("#score").load("PHP/tech_score.php?no=3");
+		} 
+		setInterval('autoRefresh_div()', 500); // refresh div after 5 secs
+		</script>
+    </head>
+    <body>
+	<div id="score">Your score is : 0</div>
+        <div id="buzzer">
+            <div class="fill">
+                <div class="outer-edge">  
+                    <input class="highlight" type="button" id="fu" value="C"/>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
