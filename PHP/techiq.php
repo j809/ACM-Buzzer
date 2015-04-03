@@ -27,6 +27,7 @@ form {
 <div class="score" align="center" >
 
 <?php
+error_reporting(E_ALL ^ E_DEPRECATED);
 if(isset($_POST['submit']))
 {
 	$no = mysql_escape_string($_POST['team']);
